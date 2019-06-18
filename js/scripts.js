@@ -10,23 +10,13 @@ $(document).ready(function(){
     console.log(taskList);
     $("#list").append("<li id='" + count + "'>" + "To do:" + " " + task1.task + "</li>");
     id=""
-    $("#1").click(function() {
-      $("#1").hide();
+
+    $('ul').on('click', 'li', function () {
+      $(this).toggleClass('crossOff');
     });
-    $("#2").click(function() {
-      $("#2").hide();
-    });
-    $("#3").click(function() {
-      $("#3").hide();
-    });
-    $("#4").click(function() {
-      $("#4").hide();
-    });
-    $("#5").click(function() {
-      $("#5").hide();
-    });
-    $("#6").click(function() {
-      $("#6").hide();
+
+    $('ul').on('dblclick', 'li', function () {
+      $(this).hide('li');
     });
   });
 });
